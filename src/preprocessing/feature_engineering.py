@@ -26,8 +26,6 @@ class FeatureEngineering:
         X = df[FEATURES]
         y = df["alagamento"]
         
-        print(df["alagamento"].value_counts())
-
         return X, y
     
     
