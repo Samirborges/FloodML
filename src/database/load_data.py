@@ -31,5 +31,3 @@ class LoadData:
         return cls.query(sql)
     
     
-df = LoadData.load_meteorological_data()
-print(df)
