@@ -7,4 +7,4 @@ X_train, X_test, y_train, y_test = SplitData.split()
 model = LogisticModel.train(X_train, y_train)
 
 print(model)
-print(EvaluateModel.evaluate(model, X_test, y_test))
+EvaluateModel.evaluate(model, X_test, y_test)
