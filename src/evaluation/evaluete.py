@@ -6,6 +6,8 @@ from sklearn.metrics import (
     confusion_matrix,
     classification_report
 )
+import matplotlib.pyplot as plt
+from sklearn.metrics import ConfusionMatrixDisplay
 
 
 class EvaluateModel:
@@ -25,3 +27,12 @@ class EvaluateModel:
 
         print("\nClassification Report:")
         print(classification_report(y_test, y_pred))
+        
+        ConfusionMatrixDisplay.from_estimator(
+            model,
+            X_test,
+            y_test
+        )
+
+        plt.savefig("confusion_matrix_rf.png")
+        plt.show()
